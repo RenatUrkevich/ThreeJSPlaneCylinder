@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+        </style>
+        <link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+        <div class="container">
+            <div class="renderWindow"></div>
+            <div class="tools">
+                <div class="s">
+                    <div class="elements-header">Scene collection</div>
+                    <ul class="object-list">
+                    </ul>
+                </div>
+                <div class="buttons">   
+                    <button onclick="modalWindowHandler.open()">Point</button>
+                    <button onclick="planeHandler.click()">Plane</button>
+                    <button onclick="ObjectHandler.delete()">Delete</button>
+                    <button onclick="cylinderWindowHandler.open()">Cylinder</button>
+    
+                </div>
+               
+            </div>
+            <div class="modalWindow">
+                <b>Point Name</b>
+                <input id="modal-point-input-name" type="text" autocomplete="off" onkeyup="modalWindowHandler.keyUp(event)"/>
+                <b>Coordinates</b>
+                <input id="modal-point-input" type="text" autocomplete="off" onkeyup="modalWindowHandler.keyUp(event)"/>
+                <button onclick="modalWindowHandler.addClick()">Add</button>
+                <img src="./resources/close.png" width="22px" height="22px" class="close" onclick="modalWindowHandler.close()"></img>
+            </div>
+        
+
+            <div class="cylinder">
+                <b>Radius</b>
+                <input id="cylinder_radius_value" type="text" autocomplete="off" onkeyup="modalWindowHandler.keyUp(event)"/>
+                
+                <button onclick="cylinderWindowHandler.draw()">Draw</button>
+                <img src="./resources/close.png" width="22px" height="22px" class="close" onclick="cylinderWindowHandler.close()"></img>
+            </div>
+        
+        <script src="./three.js"></script>
+        <script src="./mashLine.js"></script>
+		<script src="./OrbitControl.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>
