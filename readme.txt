@@ -11,3 +11,5 @@
 10) Нажать кнопку Cylinder
 11) Ввести радиус и нажать кнопку построить
 12) Цилиндр построен.
+
+https://renaturkevich.github.io/ThreeJSPlaneCylinder/
